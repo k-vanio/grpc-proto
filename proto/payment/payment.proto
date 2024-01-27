@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package payment;
+
+import "proto/transaction/transaction.proto";
+
+option go_package = "github.com/k-vanio/grpc-proto/proto-gen/payment";
+
+message Request {
+    string id = 1;
+}
+
+message Response {
+    string id = 1;
+    string status = 2;
+    transaction.Hash hash = 3;
+}
+
+service Payment {
+    rpc Pay(Request) returns (Response);
+}
