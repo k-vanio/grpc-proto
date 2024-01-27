@@ -27,6 +27,9 @@ jobs:
             export GOROOT=/usr/local/go
             export GO111MODULE=on
 
+        - name: Limpar cache do módulo Go
+          run: go clean -modcache
+
         - name: Install protoc
           run: |
             sudo apt-get install -y protobuf-compiler golang-goprotobuf-dev
