@@ -8,5 +8,6 @@ message Hash {
     string id = 1;
     int64 status = 2;
     float value = 3;
+    float fee = 4;
 }
 
