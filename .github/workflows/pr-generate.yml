@@ -22,9 +22,14 @@ jobs:
 
         - name: Set up Go environment
           run: |
-              export GOPATH=$HOME/go
-              export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
-              export GOROOT=/usr/local/go
+            export GOPATH=$HOME/go
+            export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+            export GOROOT=/usr/local/go
+            export GO111MODULE=on
+
+        - name: Install dependencies
+          run: |
+            go mod download
 
         - name: Generate Go Source
           shell: bash
