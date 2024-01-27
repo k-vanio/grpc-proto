@@ -27,10 +27,6 @@ jobs:
             export GOROOT=/usr/local/go
             export GO111MODULE=on
 
-        - name: Install dependencies
-          run: |
-            go mod download
-
         - name: Generate Go Source
           shell: bash
           run: |
