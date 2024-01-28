@@ -6,13 +6,14 @@ tidy:
 
 clean:
 ifeq ($(OS),Windows_NT)
-	if exist "protoc" rd /s /q proto-gen
+	if exist "protoc" rd /s /q internal/proto-gen
 else
-	rm -fR ./protogen
+	rm -fR ./internal/proto-gen
 endif
 
 generate:
-	protoc --go_opt=module=${GO_MODULE} --go_out=. ./proto/**/*.proto
+	protoc --go_out=module=${GO_MODULE}:. --go-grpc_out=module=${GO_MODULE}:. ./proto/**/*.proto
+
 
 .PHONY: build
 build: clean generate tidy

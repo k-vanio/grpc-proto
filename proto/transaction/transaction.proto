@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package transaction;
 
-option go_package = "github.com/k-vanio/grpc-proto/proto-gen/transaction";
+option go_package = "github.com/k-vanio/grpc-proto/internal/proto-gen/transaction";
 
 message Hash {
     string id = 1;
