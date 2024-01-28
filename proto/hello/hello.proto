@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package hello;
 
-option go_package = "github.com/k-vanio/grpc-proto/proto-gen/hello";
+option go_package = "github.com/k-vanio/grpc-proto/internal/proto-gen/hello";
 
 message Request {
   string name = 1;
