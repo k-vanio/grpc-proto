@@ -9,7 +9,5 @@ message Hash {
     int64 status = 2;
     float value = 3;
     float fee = 4;
-    string from = 5;
-    string to = 6;
 }
 
